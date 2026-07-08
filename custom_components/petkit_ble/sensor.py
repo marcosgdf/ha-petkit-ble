@@ -277,6 +277,7 @@ class PetkitRSSISensor(PetkitSensorBase):
     _attr_native_unit_of_measurement = "dBm"
     _attr_state_class = SensorStateClass.MEASUREMENT
     _attr_entity_registry_enabled_default = False
+    _attr_entity_category = EntityCategory.DIAGNOSTIC
     
     def __init__(self, coordinator: PetkitBLECoordinator) -> None:
         """Initialize the RSSI sensor."""
@@ -296,6 +297,7 @@ class PetkitVoltageSensor(PetkitSensorBase):
     _attr_native_unit_of_measurement = "V"
     _attr_state_class = SensorStateClass.MEASUREMENT
     _attr_entity_registry_enabled_default = False
+    _attr_entity_category = EntityCategory.DIAGNOSTIC
     
     def __init__(self, coordinator: PetkitBLECoordinator) -> None:
         """Initialize the voltage sensor."""
@@ -312,6 +314,7 @@ class PetkitConnectionStatusSensor(PetkitSensorBase):
     """Connection status sensor."""
     
     _attr_icon = "mdi:bluetooth-connect"
+    _attr_entity_category = EntityCategory.DIAGNOSTIC
     
     def __init__(self, coordinator: PetkitBLECoordinator) -> None:
         """Initialize the connection status sensor."""
@@ -330,6 +333,7 @@ class PetkitConnectionAttemptsSensor(PetkitSensorBase):
     _attr_icon = "mdi:counter"
     _attr_state_class = SensorStateClass.MEASUREMENT
     _attr_entity_registry_enabled_default = False
+    _attr_entity_category = EntityCategory.DIAGNOSTIC
     
     def __init__(self, coordinator: PetkitBLECoordinator) -> None:
         """Initialize the connection attempts sensor."""
@@ -348,6 +352,7 @@ class PetkitLastSeenSensor(PetkitSensorBase):
     _attr_device_class = SensorDeviceClass.TIMESTAMP
     _attr_icon = "mdi:clock-check-outline"
     _attr_entity_registry_enabled_default = False
+    _attr_entity_category = EntityCategory.DIAGNOSTIC
     
     def __init__(self, coordinator: PetkitBLECoordinator) -> None:
         """Initialize the last seen sensor."""
